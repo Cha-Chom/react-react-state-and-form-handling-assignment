@@ -36,7 +36,7 @@ function ProductForm() {
       setPriceError("Price cannot be less than 0.");
       isError = true;
     } else {
-      setPrice("");
+      setPriceError("");
     }
     if (!description) {
       setDescriptionError("Description is required.");
@@ -49,6 +49,7 @@ function ProductForm() {
       isError = true;
     } else if (!emailRule.test(email.trim())) {
       setEmaolError("Invalid email format.");
+      isError = true;
     } else {
       setEmaolError("");
     }
@@ -57,13 +58,13 @@ function ProductForm() {
     if (isError === false) {
       const data = {
         username: username,
-        images: images,
         price: price,
+        images: images,
         description: description,
         email: email,
       };
+      
       alert(JSON.stringify(data, null, 2));
-
     }
   }
 
