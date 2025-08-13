@@ -5,7 +5,7 @@
 }
 
 :root {
-  --primary-color: hsl(0, 60%, 20%);
+  --primary-color: hsl(0, 0%, 100%);
   --secondary-color: hsl(0, 60%, 35%);
   --highlight-color: antiquewhite;
 
